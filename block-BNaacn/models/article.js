@@ -15,7 +15,7 @@ const Schema = mongoose.Schema;
 const articleSchema = new Schema({
   title: String,
   description: String,
-  tags: String,
+  tags: [String],
   createdAt: {
     type: Date,
   },
@@ -27,6 +27,4 @@ const articleSchema = new Schema({
 
 const Article = mongoose.model("Article", articleSchema);
 
-module.exports = {
-    Article
-}
+module.exports = Article;

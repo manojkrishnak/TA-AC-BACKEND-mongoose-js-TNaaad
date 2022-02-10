@@ -25,5 +25,10 @@ const addressSchema = new Schema({
     required: true,
   },
   pin: Number,
-  user: String, //ObjectId of User from user schema
-});
+  user: mongoose.Types.ObjectId, //ObjectId of User from user schema
+}, { timestamps: true });
+
+
+const Address = mongoose.model("Address", addressSchema);
+
+module.exports = Address;

@@ -15,15 +15,9 @@ const userSchema = new Schema({
         type: String,
         min: 5
     },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
-    favourites: [String]
+    favourites: [String],
 }, { timestamps: true });
 
 const User = mongoose.model("User", userSchema);
 
-module.exports = {
-    User
-}
+module.exports = User;
